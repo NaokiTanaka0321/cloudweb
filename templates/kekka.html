@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>結果</title>
+  </head>
+  <body>
+    <div class="xxx">
+    <h1>予測結果</h1>
+    <img src={{img}} alt="今回の画像" title="今回の画像">
+    {% for ban,desc,kaku in namae %}
+      <p class="zyuni">{{ban}}. {{desc}} {{kaku}}%</p>
+    {% endfor %}<br>
+    
+    
+        {% if label==0  %}
+            <h2>巻雲</h2>
+                <p>巻雲は、刷毛で伸ばしたような細い雲が散らばった形の白い雲です。細い雲片一つ一つがぼやけず輪郭がはっきりしていて、絹のような光沢をもつのが特徴。巻雲が見られるような段階では概ね晴天ですが、数日後には天候が崩れることが多いようです。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/巻雲">Wikipedia</a>へ
+            </p>
+        {% elif label==1  %}
+            <h2>乱層雲</h2>
+            <p>低い場所の空全体を覆い、一様に灰色をした雲。雨雲または雪雲とも呼ばれ、雨や雪をもたらす典型的な雲です。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/乱層雲">Wikipedia</a>へ
+            </p>
+        {% elif label==2  %}
+            <h2>巻層雲</h2>
+            <p>巻層雲は、全空を覆うように現れるうすい雲。この雲が太陽や月にかかると暈（かさ：光の輪のようなもの）ができることがあります。この巻層雲が巻積雲（うろこ雲）に変わっていくと天気が崩れる傾向です。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/巻層雲">巻層雲のWikipedia</a>へ
+            </p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/巻積雲">巻積雲のWikipedia</a>へ
+            </p>
+        {% elif label==3  %}
+            <h2>高積雲</h2>
+            <p>高積雲（ひつじ雲）は巻積雲（うろこ雲）のひとつひとつの雲の塊が大きくなり、雲の底が灰色っぽくなってきた状態です。巻積雲と同様に、空気の状態が乱れているときに現れるので、全天に広がっていくときは要注意です。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/高積雲">高積雲のWikipedia</a>へ
+            </p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/巻積雲">巻積雲のWikipedia</a>へ
+            </p>
+        {% elif label==4  %}
+            <h2>高層雲</h2>
+            <p>全空を覆い、すりガラスをかざした時のような高層雲と、下にある層積雲が発達し上へあがってくるような時のサンドイッチ状態では、数時間後に雨になることがあり天候悪化はほぼ確実。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/高層雲">高層雲のWikipedia</a>へ
+            </p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/層積雲">層積雲のWikipedia</a>へ
+            </p>
+        {% elif label==5  %}
+            <h2>積雲</h2>
+            <p>晴れた日によく現れるむくむくとした綿菓子のような雲です。他の積雲状の雲と同じように、割合狭い範囲の空気が上昇したときにできます。積雲は晴れた日の午前中に現れ、夕方に消えることが多くありますが、気温が高い時にはさらに発達して積乱雲になることがあります。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/積雲">積雲のWikipedia</a>へ
+            </p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/積乱雲">積乱雲のWikipedia</a>へ
+            </p>
+        {% elif label==6  %}
+            <h2>巻積雲</h2>
+            <p>巻積雲は、秋を象徴する美しく純白のうろこ状の雲です。上空7000～8000mの高いところに出現します。空気が乱れている状態で発生するため天候悪化の前兆を示します。少ない巻積雲が短時間で全空を覆うようになったり、塊が大きくなって低くなってきたら悪化の兆しです。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/巻積雲">Wikipedia</a>へ
+            </p>
+        {% elif label==7  %}
+            <h2>層積雲</h2>
+            <p>曇り空に現れる畑のうねのようにいくつもの雲が長く横たわっているような雲で、白い雲から黒い雲まで形や大きさもさまざまです。曇り空だが比較的層が薄く、降水を伴うことは少ないというのが特徴。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/層積雲">Wikipedia</a>へ
+            </p>
+        {% elif label==8  %}
+            <h2>層雲</h2>
+            <p>最も低い所に浮かぶ雲で、濃い霧が掛かっているように見えます。よく山に掛かっており、雲海と言われるのはこの雲のことです。降水をもたらすこともあるが、霧雨や霧雪に分類されるような、粒の細かい降水であることが多いです。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/層雲">Wikipedia</a>へ
+            </p>
+        {% else  %}
+            <h2>積乱雲</h2>
+            <p>いわゆる「入道雲」と言われる雲。積雲が、大気の不安定な状態で上空にどんどん成長し、上部が氷点下の高いエリアに達し積乱雲になると、落雷や大雨、突風、雹などの激しい気象現象をもたらす、もっとも危険な雲です。風上側にこのような雲が発達するときや、周囲で入道雲が次々と発達していくときは、すぐに少しでも安全な場所へ避難を。</p>
+            <p>
+            <a href="https://ja.wikipedia.org/wiki/積乱雲">Wikipedia</a>へ
+            </p>
+        {% endif %}
+    
+    <a href="./">TOPに飛びます</a>
+  </div>
+  </body>
+</html>
+
+<style type="text/css">
+div {
+  background: #ffffff;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+img{
+  height: 250px;
+}
+
+</style>
